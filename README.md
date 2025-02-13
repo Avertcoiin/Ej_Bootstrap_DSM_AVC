@@ -44,3 +44,5 @@ La página de administración incluye los siguientes elementos:
 2. Navega al directorio del proyecto
 3. Abre los archivos [index.html] y [administracion.html] en tu navegador web para ver las páginas.
 
+
+Amaia Vertiz Conde
