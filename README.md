@@ -38,7 +38,7 @@ La página de administración incluye los siguientes elementos:
 - **animate.css**: Para animaciones en la página de inicio.
 - **Chart.js**: Para la gráfica de actividad de usuarios en la página de administración.
 
-## Cómo ejecutar el proyecto
+## Cómo probar el proyecto
 
 1. Clona el repositorio
 2. Navega al directorio del proyecto
