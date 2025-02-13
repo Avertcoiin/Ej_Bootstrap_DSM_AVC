@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<!-- Swift + Alt + F para que se reformatee bonito-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hasiera - Baztan bidasoa Turismoa</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- Especificaciones ejecicio Bootstrap:
+    Crear una home pública con:
+        X a. Logo
+        X b. Idiomas
+        X c. Input para buscador
+        X d. Menú desplegable y responsivo
+        X e. Carrusel fotográfico
+        X f. Título o eslogan animado con anímate.css
+        X g. Dos bloques 50-50 texto e imagen
+        X h. 4 bloques responsivos
+        X i. Bloque con pestañas o acordeones -> Lo de "QUÉ HACER"
+        X j. Dos bloques responsivos con formulario de login y mapa (como imagen)
+        X k. Pie diferenciado con tres bloques 
+    -->
+
+    <div class="container-fluid" style="background-color: var(--bs-secondary-bg);">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <!-- Enlace para llamar con el icono de teléfono -->
+                <a class="nav-link link-success" href="tel:+34948592323">
+                    <!-- Icono de teléfono SVG desde la carpeta img -->
+                    <img src="img/telephone.svg" alt="Teléfono" width="16" height="16">
+                    +34 948 59 23 23
+                </a>
+            </li>
+            <li class="nav-item">
+                <!-- Enlace para enviar correo con el icono de correo -->
+                <a class="nav-link link-success" href="mailto:info@baztan-bidasoa.com">
+                    <!-- Icono de correo SVG desde la carpeta img -->
+                    <img src="img/envelope.svg" alt="Correo electrónico" width="16" height="16">
+                    info@baztan-bidasoa.com
+                </a>
+            </li>
+            <li class="nav-item">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-success" for="btnradio1">Euskara</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-success" for="btnradio2">Castellano</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                    <label class="btn btn-outline-success" for="btnradio3">Inglés</label>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div class="container-fluid"> <!--  style="background-color: var(--bs-success-bg-subtle);" -->
+        <nav class="navbar navbar-expand-lg"> 
+            <a class="navbar-brand" href="#"> <!-- href="#" para que no redirija a ninguna parte -->
+                <img src="img/logo.png" class="img-fluid navbar-brand w-50" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dónde dormir</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Qué visitar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Baztan</a></li>
+                            <li><a class="dropdown-item" href="#">Bertizarana</a></li>
+                            <li><a class="dropdown-item" href="#">Bortziriak</a></li>
+                            <li><a class="dropdown-item" href="#">Malerreka</a></li>
+                            <li><a class="dropdown-item" href="#">Urdazubi/Urdax</a></li>
+                            <li><a class="dropdown-item" href="#">Zugarramurdi</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Ver más</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Carrusel -->
+    <div class="container-fluid>">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/baztan_1.jpg" class="d-block w-100" alt="baztan_1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/baztan_2.jpg" class="d-block w-100" alt="baztan_2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/baztan_3.jpeg" class="d-block w-100" alt="baztan_3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Eslogan animado -->
+    <h1 class="text-center my-5 animate__animated animate__rubberBand"> ONGI ETORRI! ¡BIENVENIDO/A!</h1>
+
+    <!-- Dos bloques 50-50 texto e imagen -->
+    <div class="container-lg"> <!-- col-lg -->
+        <div class="row">
+            <div class="col-lg-6">
+                <p>Situado al norte de Navarra, el paisaje de la comarca Baztan-Bidasoa es una perfecta unión de los
+                    montes, pueblos, bosques, ríos, caseríos y verdes prados. El río Bidasoa que nace en Baztan y que
+                    después recorre los valles de Bertizarana, Malerreka y Bortziriak da nombre a una comarca con mucha
+                    historia; el agua nos une, y por ello, somos los valles del agua (Uraren Bailarak) </p>
+                <p>Podéis coger la bicicleta y pasear por la Vía Verde del Bidasoa que recorre los valles por los
+                    márgenes del río, coger la mochila y caminar por el Camino de Santiago Baztanés, que cruza el
+                    precioso valle de Baztan o descubrir esos rincones con encanto que encontrarás en los tranquilos y
+                    pequeños pueblos de la zona. En Baztan-Bidasoa confluyen las antiguas tradiciones y construcciones
+                    con la gente, cultura, naturaleza y pueblos que se mantienen vivos. </p>
+            </div>
+            <div class="col-lg-6"><img src="img/uraren_bailarak_BL.jpg" class="img-fluid" alt="uraren_bailarak"></div>
+        </div>
+    </div>
+
+    <!-- Cuatro bloques responsivos -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 bg-light p-3">Bloque 1</div>
+            <div class="col-md-3 col-sm-6 bg-secondary p-3">Bloque 2</div>
+            <div class="col-md-3 col-sm-6 bg-light p-3">Bloque 3</div>
+            <div class="col-md-3 col-sm-6 bg-secondary p-3">Bloque 4</div>
+        </div>
+    </div>
+
+
+    <!-- Acordeón -->
+    <div class="container-md">
+        <h3> QUÉ HACER </h3>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                        style="background-color: var(--bs-secondary-bg);">
+                        La ruta del agua
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>La Ruta del Agua, o Uraren Bidea, es un agradable camino de 8 kilómetros que une las
+                            localidades de Doneztebe/Santesteban, Elgorriaga, Ituren y Zubieta. Es un camino fácil y
+                            bonito, ya que recorre una parte del valle de Malerreka al lado del río Ezkurra. Una
+                            magnifica opción para pasear, para practicar un senderismo fácil y tranquilo o recorrerlo en
+                            bicicleta.</p>
+                        <strong>El recorrido: </strong>
+                        <p>Este recorrido cuenta con 8 kilómetros y es lineal, por tanto, puede hacerse comenzando desde
+                            Doneztebe/Santesteban o desde Zubieta.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                        style="background-color: var(--bs-secondary-bg);">
+                        Senderos a pie
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p> Caminar por los senderos locales y de montaña es una de las mejores maneras de conocer los
+                            paisajes y pueblos de Baztan-Bidasoa. Para ello, la comarca nos ofrece una buena cantidad de
+                            senderos señalizados. Encontraremos muchos tipos de senderos, desde los más fáciles y cortos
+                            hasta senderos más largos que suben a los mejores montes desde donde podréis disfrutar de
+                            las mejores vistas de los valles. Los senderos que se proponen aquí, no son los únicos que
+                            encontrarás en los pueblos, pero son los que mejor se mantienen. </p>
+                        <p> Recordad que para caminar por los senderos en necesario llevar material y calzado adecuado,
+                            tomar las medidas de seguridad necesarias son responsabilidad de cada uno/una. Con mal
+                            tiempo algunos senderos pueden ser peligrosos, consulta la predicción meteorológica. </p>
+                        <p> Respeta el entorno, el medioambiente y disfruta de la naturaleza. No tires basura y respeta
+                            los animales y los habitantes de la zona. Recordad que los perros deben ir atados. </p>
+                        <p> En caso de emergencia, llamar al 112. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                        style="background-color: var(--bs-secondary-bg);">
+                        Espacios naturales
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p> Una de las razones para acercarse a Baztan-Bidasoa, es sin lugar a dudas la riqueza
+                            paisajística y natural que ofrecen los valles que lo conforman. Espacios naturales
+                            protegidos, paisajes verdes, bosques autóctonos, amplios ríos o pequeños riachuelos. El
+                            valor ecológico de los paisajes es quien le da una identidad propia a Baztan-Bidasoa.</p>
+                        <strong> Lugares de Interés Comunitario (LIC) </strong>
+                        <p> La Red Natura 2000 es una red de lugares de gran interés natural catalogados como áreas de
+                            conservación a nivel de Europa. En Baztan-Bidasoa hay varios lugares integrados en esta red
+                            con la denominación de Lugar de Interés Comunitario (LIC) como por ejemplo el río Bidasoa y
+                            Baztan, el Parque Natural de Bertiz o el monte Alduide, Belate,
+                            Aritzakun‐Gorramendi‐Urritzate, regata de Orabidea y turbera de Arxuri en Baztan. </p>
+                        <strong> El Parque Natural Señorío de Bertiz </strong>
+                        <p> El Señorío de Bertiz es el primer Parque Natural declarado en Navarra. Se enmarca de esta
+                            forma en la red de espacios protegidos de la Comunidad Foral. Bertiz es un espacio singular,
+                            tanto por sus características naturales, como por su historia. Salvo en algunos períodos del
+                            siglo XIX la mayor parte del Señorío ha estado cubierto por los bosques típicos de la zona
+                            atlántica. El hayedo mixto ha sido el bosque predominante desde hace más de 3.000 años, que
+                            ha sobrevivido en Bertiz, constituyéndose en este lugar como una de las mejores muestras que
+                            se encuentran en Navarra. La humedad que envuelve a los hayedos resbala por su superficie
+                            dando lugar a todo un surtido de regatas y pequeñas cascadas de aguas claras y cantarinas,
+                            que componen con el hayedo que las enmarca una estampa de inigualable belleza. El parque
+                            cuenta con varios senderos bien señalizados para poder conocer y caminar por el bosque. </p>
+                        <p> En la entrada al parque se encuentra el jardín botánico, con más de 100 años de antigüedad
+                            es el mayor tesoro del Parque Natural. Un entramado de caminos te permitirá admirar más de
+                            120 especies de árboles y arbustos diferentes. Fue diseñado por un jardinero francés en
+                            1847, y don Pedro Ciga lo amplió mezclando especies autóctonas con otras traídas de remotos
+                            lugares. Entre las primeras las hayas son la especie más abundante y entre las más curiosas
+                            pueden citarse el ciprés calvo, cedros de Líbano, el gingko de China, araucarias de la
+                            Tierra de Fuego, secuoyas de California, camelias, azaleas y bambúes. Joyas del Art Nouveau
+                            como estanques, puentes, glorietas, un mirador Belle Epoque y una capilla incrementan la
+                            belleza exclusiva de este jardín. </p>
+                        <strong> Los embalses de Leurtza; Área Natural Recreativa </strong>
+                        <p> Hoy Leurtza es un lugar donde los valores medioambientales y naturales están protegidos. La
+                            ubicación de los embalses en una cuenca cerrada cubierta de hayedos confiere al lugar una
+                            magia especial. Como sacados de un cuento de hadas, los embalses de Leurtza han sido
+                            declarados Área Natural Recreativa. Así, el acondicionamiento con fogones, mobiliario,
+                            puntos de información combinado con el agua, las laderas boscosas, la tranquilidad y el
+                            atractivo paisaje hacen de este espacio natural un destino ideal para familias. </p>
+                        <p> La fauna existente en Leurtza corresponde a un bosque atlántico húmedo. La rana bermeja
+                            (Rana temporaria), auténtico símbolo del lugar, encuentra aquí agua suficiente y una
+                            temperatura adecuada para su alimentación y refugio. También hay diversas especies de sapos
+                            y salamandras, en los alrededores podremos encontrarnos el jabalí, el zorro, el corzo, la
+                            fuina y el tejón. Asimismo, y como resultado de medidas para mejorar su hábitat, comienza a
+                            ser más habitual la presencia de diversas especies de murciélagos. </p>
+                        <strong> San Juan Xar; Reserva Natural </strong>
+                        <p> Este lugar único se encuentra en el municipio de Igantzi, allí se mezcla la riqueza natural
+                            del entorno con las creencias vinculadas al agua que sale de sus fuentes. Un espacio
+                            declarado Reserva Natural en 1987 por atesorar el único bosque autóctono de carpes o
+                            Carpinus betulus, también conocidos como abedulillos, de la península. Además del carpe,
+                            podremos ver castaños centenarios, arces, robles y fresnos.
+                            En el corazón de este paraje singular ubicado en pleno Pirineo occidental, encontramos una
+                            gruta, una especie de santuario natural donde veremos una gran escultura de un pastor, se
+                            dice que en este lugar se realizaban ofrendas a diversos personajes mitológicos. También se
+                            encuentra una fuente de tres chorros cuyas aguas, según la creencia popular, tienen
+                            milagrosos poderes curativos contra las afecciones de la piel. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login y mapa -->
+<div class="container-flex py-2 px-4">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-6">
+            <h5 class="text-center">Inicia sesión</h5>
+            <form>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-outline-primary">Iniciar sesión</button>
+                    <button type="button" class="btn btn-outline-secondary">Registrarse</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+            <img src="img/baztan_bidasoa_mapa.jpg" class="img-fluid w-50" alt="Mapa">
+        </div>
+    </div>
+</div>
+
+    <!-- Pie diferenciado con tres bloques -->
+    <footer class="container-fluid text-white py-5" style="background-color: #343a40;">
+        <div class="row px-4">
+            <!-- Primer bloque: Información de contacto -->
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-3">Baztan-Bidasoa Turismo Elkartea</h5>
+                <p>Edificio turismo rural</p>
+                <p>31720 Oieregi (Navarra)</p>
+                <p><a href="tel:+34948592323" class="text-white text-decoration-none">948 59 23 23</a></p>
+                <p><a href="mailto:info@baztan-bidasoa.com"
+                        class="text-white text-decoration-none">info@baztan-bidasoa.com</a></p>
+                <p class="mt-4"><strong>Eskerrak:</strong> Oskar Txoperena, Irantzu Pastor eta Ekilur Komunikazioa
+                    argazkiak uzteagatik. Eskerrik asko!</p>
+            </div>
+
+            <!-- Segundo bloque: Últimas noticias -->
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-3">Azken albisteak</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-success text-decoration-none">Anton Deuna, animalien zaindaria</a> </li>
+                    <li> <small>2 urtarrila, 2025</small> </li>
+                    <li><a href="#" class="text-success text-decoration-none">Joare soinuak urte berria agurtzeko</a>
+                    </li>
+                    <li> <small>2 urtarrila, 2025</small> </li>
+                    <li><a href="#" class="text-success text-decoration-none">Azpilkueta eta Xabierko San Frantziskoren
+                            arteko lotura</a></li>
+                    <li> <small>28 azaroa, 2024</small> </li>
+                    <li><a href="#" class="text-success text-decoration-none">Eta irabazlea...</a> </li>
+                    <li> <small>28 azaroa, 2024</small> </li>
+                </ul>
+            </div>
+
+            <!-- Tercer bloque: Enlaces de interés -->
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-3">Intereseko estekak</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">ELKARTEA</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">ALBISTEAK</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">AGENDA</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Jabeak sarbidea</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+</body>

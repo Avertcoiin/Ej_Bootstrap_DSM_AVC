@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<!-- Swift + Alt + F para que se reformatee bonito-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administración - Baztan bidasoa Turismoa</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- Crear una página de administración:
+            X a. Columna izquierda con logo y menú vertical
+            X b. Breadcrumb
+            X c. Tablas
+            X d. Botones + modal
+            X e. Barra de progreso
+            X f. Popovers y toolpits 
+    -->
+
+    <div class="container-fluid">
+        <div class="row vh-100 d-flex">
+            <!-- Ajustamos todo el contenedor (columna izquierda + contenido principal) de forma adecuada para poder colocar la barra izquierda -->
+
+            <!-- Columna izquierda: Logo y menú col-2 text-white sidebar py-3-->
+            <div class="col-12 col-sm-4 col-md-3 col-lg-2 text-white sidebar py-3"
+                style="background-color: var(--bs-secondary-bg); min-width: 150px;">
+                <nav class="sidebar-nav">
+                    <div class="text-center mb-4">
+                        <img src="img/logo.png" class="img-fluid navbar-brand" style="max-width: 100px;" alt="logo">
+                        <!-- Logo ajustado -->
+                    </div>
+                    <ul class="nav nav-tabs flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link link-success" href="#"> 📋 Gestión de Usuarios </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-success active" aria-current="page" href="#"> ⚙ Configuración </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-success" href="#"> 🚪 Cerrar Sesión </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Contenido principal col-10 d-flex flex-column -->
+            <div class="col-12 col-sm-8 col-md-9 col-lg-10 d-flex flex-column">
+
+                <!-- Breadcrumb -->
+                <div class="container-fluid d-flex align-items-center"
+                    style="background-color: var(--bs-light); height: 60px;">
+                    <nav class="d-flex align-items-center" style="--bs-breadcrumb-divider: '>';"
+                        aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a class="link-success" href="#">Inicio</a></li>
+                            <li class="breadcrumb-item"><a class="link-success" href="#">Administración</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Configuración</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="container-fluid py-3"> <!-- container-fluid py-3 -->
+                    <h1 class="animate__animated animate__bounce">Configuración</h1>
+                    <p>¡Bienvenido/a al panel de configuración! Aquí podrás configurar la página web, acceder a las
+                        tareas pendientes así como programar las distintas actividades y gestionar el calendario</p>
+
+                    <!-- Barra de progreso de tareas -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Tareas pendientes</th>
+                                <th scope="col" style="width: 50%;">Progreso</th> <!-- Se amplía el espacio -->
+                                <th scope="col" class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Configuración de Destinos</td>
+                                <td>
+                                    <div class="progress" role="progressbar" aria-label="Progress 60%"
+                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                            style="width: 60%"></div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="popover"
+                                        data-bs-placement="right" data-bs-title="Más información"
+                                        data-bs-content="Esta tarea implica configurar los destinos disponibles en la plataforma.">
+                                        Más información
+                                    </button>
+                                    <button class="btn btn-primary btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#actionModal" data-bs-title="Gestión de Destinos"
+                                        data-bs-message="Administra la configuración de destinos aquí.">
+                                        Gestionar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Activación de Paquetes</td>
+                                <td>
+                                    <div class="progress" role="progressbar" aria-label="Progress 40%"
+                                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                            style="width: 40%"></div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="popover"
+                                        data-bs-placement="right" data-bs-title="Más información"
+                                        data-bs-content="En esta tarea se activan los paquetes de servicios disponibles.">
+                                        Más información
+                                    </button>
+                                    <button class="btn btn-primary btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#actionModal" data-bs-title="Gestión de Paquetes"
+                                        data-bs-message="Administra la activación de paquetes aquí.">
+                                        Gestionar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Configuración de Reservas</td>
+                                <td>
+                                    <div class="progress" role="progressbar" aria-label="Progress 80%"
+                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                            style="width: 80%"></div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="popover"
+                                        data-bs-placement="right" data-bs-title="Más información"
+                                        data-bs-content="Esta tarea permite configurar las opciones de reservas.">
+                                        Más información
+                                    </button>
+                                    <button class="btn btn-primary btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#actionModal" data-bs-title="Gestión de Reservas"
+                                        data-bs-message="Administra la configuración de reservas aquí.">
+                                        Gestionar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Descuentos de Temporada</td>
+                                <td>
+                                    <div class="progress" role="progressbar" aria-label="Progress 20%"
+                                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                            style="width: 20%"></div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="popover"
+                                        data-bs-placement="right" data-bs-title="Más información"
+                                        data-bs-content="Gestiona los descuentos aplicables por temporada.">
+                                        Más información
+                                    </button>
+                                    <button class="btn btn-primary btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#actionModal" data-bs-title="Gestión de Descuentos"
+                                        data-bs-message="Administra los descuentos de temporada aquí.">
+                                        Gestionar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Comentarios de Clientes</td>
+                                <td>
+                                    <div class="progress" role="progressbar" aria-label="Progress 90%"
+                                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                            style="width: 90%"></div>
+                                    </div>
+                                </td>
+                                <td class="text-end">
+                                    <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="popover"
+                                        data-bs-placement="right" data-bs-title="Más información"
+                                        data-bs-content="Revisa y administra los comentarios y valoraciones de los clientes.">
+                                        Más información
+                                    </button>
+                                    <button class="btn btn-primary btn-sm btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#actionModal" data-bs-title="Gestión de Comentarios"
+                                        data-bs-message="Administra los comentarios y valoraciones de los clientes aquí.">
+                                        Gestionar
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <!-- Gráfica -->
+                <div class="container-fluid">
+                    <h3>Gráfica de actividad de usuarios por mes</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Canvas para el gráfico -->
+                            <canvas id="myChart" style="width: 100%; height: 400px;"></canvas>
+                            <!-- Grafica usando chart.js -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tablas -->
+                <div class="container-fluid py-3">
+                    <div class="row">
+                        <!-- Columna izquierda: Tabla simple -->
+                        <div class="col-12 col-md-6">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Configuración</th>
+                                        <th scope="col">Estado</th>
+                                        <th scope="col">Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Destinos Activos</td>
+                                        <td><span class="badge bg-success">Activado</span></td>
+                                        <td>
+                                            <!-- Botón con Tooltip -->
+                                            <button type="button" class="btn btn-secondary btn-sm"
+                                            data-bs-toggle="tooltip" data-bs-placement="right"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Pulsa para configurar los destinos activos">
+                                                Configuración
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Paquetes Promocionales</td>
+                                        <td><span class="badge bg-danger">Desactivado</span></td>
+                                        <td>
+                                            <!-- Botón con Tooltip -->
+                                            <button type="button" class="btn btn-secondary btn-sm"
+                                                data-bs-toggle="tooltip" data-bs-placement="right"
+                                                data-bs-custom-class="custom-tooltip"
+                                                data-bs-title="Pulsa para configurar los paquetes promocionales">
+                                                Configuración
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Reservas Online</td>
+                                        <td><span class="badge bg-success">Activado</span></td>
+                                        <td>
+                                            <!-- Botón con Tooltip -->
+                                            <button type="button" class="btn btn-secondary btn-sm"
+                                            data-bs-toggle="tooltip" data-bs-placement="right"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Pulsa para configurar las reservas online">
+                                                Configuración
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Descuentos por Temporada</td>
+                                        <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                                        <td>
+                                            <!-- Botón con Tooltip -->
+                                            <button type="button" class="btn btn-secondary btn-sm"
+                                                data-bs-toggle="tooltip" data-bs-placement="right"
+                                                data-bs-custom-class="custom-tooltip"
+                                                data-bs-title="Pulsa para configurar los descuentos por temporada">
+                                                Configuración
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Comentarios de Clientes</td>
+                                        <td><span class="badge bg-success">Activado</span></td>
+                                        <td>
+                                            <!-- Botón con Tooltip -->
+                                            <button type="button" class="btn btn-secondary btn-sm"
+                                            data-bs-toggle="tooltip" data-bs-placement="right"
+                                            data-bs-custom-class="custom-tooltip"
+                                                data-bs-title="Pulsa para configurar los comentarios de los clientes">
+                                                Configuración
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Columna derecha: Tabla con tareas pendientes y progreso -->
+                        <div class="col-12 col-md-6 py-1">
+                            <table class="container mt-4">
+                                <h6 class="mb-3">Gestión de usuarios</h6>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <div class="rounded-circle bg-primary flex-shrink-0" style="width: 30px; height: 30px;"></div>
+                                        <div class="ms-3">
+                                            <strong>@Usuario1</strong>
+                                            <p class="mb-0 text-muted">Información sobre el usuario 1</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <div class="rounded-circle bg-danger flex-shrink-0" style="width: 30px; height: 30px;"></div>
+                                        <div class="ms-3">
+                                            <strong>@Usuario2</strong>
+                                            <p class="mb-0 text-muted">Información sobre el usuario 2</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <div class="rounded-circle flex-shrink-0" style="background-color: #6f42c1; width: 30px; height: 30px;"></div>
+                                        <div class="ms-3">
+                                            <strong>@Usuario3</strong>
+                                            <p class="mb-0 text-muted">Información sobre el usuario 3</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                                        <div class="rounded-circle bg-success flex-shrink-0" style="width: 30px; height: 30px;"></div>
+                                        <div class="ms-3">
+                                            <strong>@Usuario4</strong>
+                                            <p class="mb-0 text-muted">Información sobre el usuario 4</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </table>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="actionModal" tabindex="-1" aria-labelledby="actionModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="actionModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Este mensaje será dinámico según el botón presionado -->
+                        <p id="modalMessage">Contenido del modal</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </main>
+    </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <!-- Popovers, tooltips y modal dinámico -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Inicializar popovers de Bootstrap
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl);
+            });
+
+            // Activar todos los tooltips tal y como se indica en la página de bootstrap
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            // Configuración dinámica del modal
+            var actionModal = document.getElementById('actionModal');
+            actionModal.addEventListener('show.bs.modal', function (event) {
+                var button = event.relatedTarget; // Botón que activó el modal
+                var modalTitle = button.getAttribute('data-bs-title'); // Obtiene el título
+                var modalMessage = button.getAttribute('data-bs-message'); // Obtiene el mensaje
+
+                var modalTitleElement = actionModal.querySelector('.modal-title');
+                var modalMessageElement = actionModal.querySelector('#modalMessage');
+
+                modalTitleElement.textContent = modalTitle; // Actualiza el título del modal
+                modalMessageElement.textContent = modalMessage; // Actualiza el mensaje
+            });
+        });
+    </script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Obtener el contexto del canvas donde se dibujará la gráfica
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        // Crear el gráfico de barras
+        var myChart = new Chart(ctx, {
+            type: 'bar', // Tipo de gráfico
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'], // Etiquetas (meses)
+                datasets: [{
+                    label: 'Actividad', // Etiqueta para la serie de datos
+                    data: [450, 100, 150, 250, 300, 800, 1500, 2000, 450, 400, 200, 450], // Datos de la gráfica (cantidad de usuarios)
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de las barras
+                    borderColor: 'rgba(75, 192, 192, 1)', // Color del borde
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true, // Hacer el gráfico responsivo
+                maintainAspectRatio: false, // No mantener la relación de aspecto
+                scales: {
+                    y: {
+                        beginAtZero: true // Asegura que el eje Y comience en 0
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
