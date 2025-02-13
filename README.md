@@ -34,7 +34,7 @@ La página de administración incluye los siguientes elementos:
 
 ## Tecnologías utilizadas
 
-- **Bootstrap 5**: Para el diseño responsivo y componentes de la interfaz de usuario.
+- **Bootstrap**: Para el diseño responsivo y componentes de la interfaz de usuario.
 - **animate.css**: Para animaciones en la página de inicio.
 - **Chart.js**: Para la gráfica de actividad de usuarios en la página de administración.
 
