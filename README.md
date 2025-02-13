@@ -1,4 +1,4 @@
-# Ejercicios-Bootstrap---Despliegue-de-Servicios-Multimedia
+# Ejercicios Bootstrap. Despliegue de Servicios Multimedia
 Este repositorio contiene los ejercicio de Bootstrap de la asignatura de Despliegue de Servicios Multimedia. Las páginas son:
 
 1. `index.html`: Página de inicio pública.
