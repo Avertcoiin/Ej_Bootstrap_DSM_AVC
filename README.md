@@ -42,11 +42,3 @@ La página de administración incluye los siguientes elementos:
 2. Navega al directorio del proyecto
 3. Abre los archivos [index.html] y [administracion.html] en tu navegador web para ver las páginas.
 
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request para discutir cualquier cambio que te gustaría realizar.
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para obtener más detalles.
