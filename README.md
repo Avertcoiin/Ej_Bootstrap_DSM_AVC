@@ -18,6 +18,8 @@ La página de inicio pública incluye los siguientes elementos:
 - **Formulario de login y mapa**: Incluye un formulario de inicio de sesión y una imagen del mapa de la región.
 - **Pie de página**: Contiene información de contacto, últimas noticias y enlaces de interés.
 
+NOTA: se ha añadido un CSS para conseguir el desvanecimiento dinámico del mensaje de BIENVENIDOS.
+
 ### administracion.html
 
 La página de administración incluye los siguientes elementos:

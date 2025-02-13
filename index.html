@@ -102,8 +102,9 @@
                     </li>
                 </ul>
                 <!-- Eslogan animado -->
-                <div class="container-flex">
-                    <h5 id="eslogan" class="text-center animate__animated animate__rubberBand px-5 eslogan">ONGI ETORRI! ¡BIENVENIDO/A!</h5>
+                <div class="container">
+                    <h5 id="eslogan" class="text-center animate__animated animate__rubberBand mx-5">ONGI ETORRI!
+                        ¡BIENVENIDO/A!</h5>
                 </div>
 
                 <form class="d-flex" role="search">
@@ -382,4 +383,47 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
+
+
+
+    <script>
+        // Función que aplica la animación y desaparece el eslogan
+        window.onload = function () {
+            // Obtén el elemento del eslogan
+            var eslogan = document.getElementById('eslogan');
+
+            // Agrega la animación para que salte al cargar la página
+            eslogan.classList.add('animate__animated', 'animate__rubberBand');
+
+            // Después de 3 segundos, aplica la animación para desaparecer con zoom
+            setTimeout(function () {
+                eslogan.classList.remove('animate__rubberBand'); // Elimina la animación de salto
+                eslogan.classList.add('zoomOutCustom');          // Aplica la animación de desaparición con zoom
+            }, 3000);  // Espera 3 segundos (3000 ms) para empezar a desaparecer
+        };
+    </script>
+
+    <!-- Estilo para permitir que desvanezca -->
+    <style>
+        /* Animación personalizada para desaparecer con zoom */
+        .zoomOutCustom {
+            animation: zoomOut 2s ease forwards;
+            /* Usando zoomOut con un tiempo de 2s */
+        }
+
+        @keyframes zoomOut {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(0);
+                /* Se reduce el tamaño */
+                opacity: 0;
+                /* Se desvanece */
+            }
+        }
+    </style>
+
 </body>
