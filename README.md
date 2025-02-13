@@ -10,13 +10,13 @@ Este repositorio contiene los ejercicio de Bootstrap de la asignatura de Desplie
 
 La página de inicio pública incluye los siguientes elementos:
 
-- **Logo y menú de navegación**: Incluye enlaces a diferentes secciones del sitio web.
-- **Selector de idioma**: Permite cambiar entre Euskara, Castellano e Inglés.
+- **Logo y menú de navegación**: Incluye enlaces a diferentes secciones del sitio web y contiene un input para buscador y un menú desplegable y responsivo.
+- **Selector de idiomas**: Permite cambiar entre Euskara, Castellano e Inglés.
 - **Carrusel fotográfico**: Muestra imágenes de la región.
-- **Eslogan animado**: Utiliza animate.css para animar el eslogan.
-- **Bloques de contenido**: Incluye bloques de texto e imagen, bloques responsivos y un acordeón con información sobre actividades.
+- **Eslogan animado**: Utiliza animate.css para animar la bienvenida al usuario.
+- **Bloques de contenido**: Incluye bloques de texto e imagen (50-50), cuatro bloques responsivos y un acordeón con información sobre actividades.
 - **Formulario de login y mapa**: Incluye un formulario de inicio de sesión y una imagen del mapa de la región.
-- **Pie de página**: Contiene información de contacto, últimas noticias y enlaces de interés.
+- **Pie de página diferenciado con tres bloques**: Contiene información de contacto, últimas noticias y enlaces de interés.
 
 NOTA: se ha añadido un CSS para conseguir el desvanecimiento dinámico del mensaje de BIENVENIDOS.
 
@@ -29,7 +29,7 @@ La página de administración incluye los siguientes elementos:
 - **Tablas**: Incluye tablas con tareas pendientes y progreso, así como una tabla simple de configuración.
 - **Botones y modal**: Botones que abren modales con información adicional.
 - **Barra de progreso**: Muestra el progreso de diferentes tareas.
-- **Tooltips**: Botones con tooltips que muestran información adicional al pasar el ratón por encima.
+- **Tooltips y Popovers**: Botones con tooltips y popovers que muestran información adicional al pasar el ratón por encima.
 - **Gráfica**: Gráfica de actividad de usuarios por mes utilizando Chart.js.
 
 ## Tecnologías utilizadas
