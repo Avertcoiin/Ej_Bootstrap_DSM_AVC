@@ -65,7 +65,7 @@
 
 
     <div class="container-fluid"> <!--  style="background-color: var(--bs-success-bg-subtle);" -->
-        <nav class="navbar navbar-expand-lg"> 
+        <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="#"> <!-- href="#" para que no redirija a ninguna parte -->
                 <img src="img/logo.png" class="img-fluid navbar-brand w-50" alt="logo">
             </a>
@@ -101,11 +101,17 @@
                         </ul>
                     </li>
                 </ul>
+                <!-- Eslogan animado -->
+                <div class="container-flex">
+                    <h5 id="eslogan" class="text-center animate__animated animate__rubberBand px-5 eslogan">ONGI ETORRI! ¡BIENVENIDO/A!</h5>
+                </div>
+
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>
+
         </nav>
     </div>
 
@@ -143,9 +149,6 @@
             </button>
         </div>
     </div>
-
-    <!-- Eslogan animado -->
-    <h1 class="text-center my-5 animate__animated animate__rubberBand"> ONGI ETORRI! ¡BIENVENIDO/A!</h1>
 
     <!-- Dos bloques 50-50 texto e imagen -->
     <div class="container-lg"> <!-- col-lg -->
@@ -297,34 +300,34 @@
     </div>
 
     <!-- Login y mapa -->
-<div class="container-flex py-2 px-4">
-    <div class="row d-flex justify-content-center align-items-center">
-        <div class="col-md-6">
-            <h5 class="text-center">Inicia sesión</h5>
-            <form>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-outline-primary">Iniciar sesión</button>
-                    <button type="button" class="btn btn-outline-secondary">Registrarse</button>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-6 d-flex justify-content-center">
-            <img src="img/baztan_bidasoa_mapa.jpg" class="img-fluid w-50" alt="Mapa">
+    <div class="container-flex py-2 px-4">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-6">
+                <h5 class="text-center">Inicia sesión</h5>
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-outline-primary">Iniciar sesión</button>
+                        <button type="button" class="btn btn-outline-secondary">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="img/baztan_bidasoa_mapa.jpg" class="img-fluid w-50" alt="Mapa">
+            </div>
         </div>
     </div>
-</div>
 
     <!-- Pie diferenciado con tres bloques -->
     <footer class="container-fluid text-white py-5" style="background-color: #343a40;">
