@@ -1,0 +1,19 @@
+/* Animación personalizada para desaparecer con zoom */
+.zoomOutCustom {
+    animation: zoomOut 1.7s ease forwards;
+    /* Usando zoomOut con un tiempo de 2s */
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        /* Se reduce el tamaño */
+        opacity: 0;
+        /* Se desvanece */
+    }
+}

@@ -11,6 +11,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- animate.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Enlazamos al css para el desvanecimiento-->
+    <link rel="stylesheet" href="css/desvanecimiento.css">
 </head>
 
 <body>
@@ -102,9 +105,9 @@
                     </li>
                 </ul>
                 <!-- Eslogan animado -->
-                <div class="container">
-                    <h5 id="eslogan" class="text-center animate__animated animate__rubberBand mx-5">ONGI ETORRI!
-                        ¡BIENVENIDO/A!</h5>
+                <div class="container-flex">
+                    <h4 id="eslogan" class="text-center animate__animated animate__rubberBand px-5">ONGI ETORRI!
+                        ¡BIENVENIDO/A!</h4>
                 </div>
 
                 <form class="d-flex" role="search">
@@ -152,7 +155,7 @@
     </div>
 
     <!-- Dos bloques 50-50 texto e imagen -->
-    <div class="container-lg"> <!-- col-lg -->
+    <div class="container-lg py-5"> <!-- col-lg -->
         <div class="row">
             <div class="col-lg-6">
                 <p>Situado al norte de Navarra, el paisaje de la comarca Baztan-Bidasoa es una perfecta unión de los
@@ -384,12 +387,9 @@
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
 
-
-
     <script>
         // Función que aplica la animación y desaparece el eslogan
         window.onload = function () {
-            // Obtén el elemento del eslogan
             var eslogan = document.getElementById('eslogan');
 
             // Agrega la animación para que salte al cargar la página
@@ -399,31 +399,8 @@
             setTimeout(function () {
                 eslogan.classList.remove('animate__rubberBand'); // Elimina la animación de salto
                 eslogan.classList.add('zoomOutCustom');          // Aplica la animación de desaparición con zoom
-            }, 3000);  // Espera 3 segundos (3000 ms) para empezar a desaparecer
+            }, 1700);  // Espera 3 segundos (3000 ms) para empezar a desaparecer
         };
     </script>
-
-    <!-- Estilo para permitir que desvanezca -->
-    <style>
-        /* Animación personalizada para desaparecer con zoom */
-        .zoomOutCustom {
-            animation: zoomOut 2s ease forwards;
-            /* Usando zoomOut con un tiempo de 2s */
-        }
-
-        @keyframes zoomOut {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            100% {
-                transform: scale(0);
-                /* Se reduce el tamaño */
-                opacity: 0;
-                /* Se desvanece */
-            }
-        }
-    </style>
 
 </body>
